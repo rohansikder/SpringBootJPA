@@ -1,0 +1,34 @@
+<style>
+    table,
+    th,
+    td {
+        border: 2px solid black;
+        border-collapse: separate;
+    }
+</style>
+
+<h1>Lecturers</h1>
+
+<!--Lecture Table-->
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>LID</th>
+            <th>Name</th>
+            <th>Tax Band</th>
+            <th>Salary Scale</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let lecturer of lecturers">
+            <td>{{ lecturer.id }}</td>
+            <td>{{ lecturer.lid }}</td>
+            <td>{{ lecturer.name }}</td>
+            <td>{{ lecturer.taxBand }}</td>
+            <td>{{ lecturer.salaryScale }}</td>
+            <td><button (click)="putUpdateLecture(lecturer.lid)">Update</button></td>
+        </tr>
+    </tbody>
+</table>

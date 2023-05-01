@@ -1,0 +1,23 @@
+<h3>Update Lecturer</h3>
+
+<!--For to update lecturer-->
+<form (ngSubmit)="onSubmit()">
+    <label>
+        LID:
+        <input type="text" name="lid" [(ngModel)]="lid" readonly>
+    </label><br>
+    <label>
+        Name:
+        <input type="text" name="name" [(ngModel)]="name" required>
+    </label><br>
+    <label>
+        Tax Band:
+        <input type="text" name="taxBand" [(ngModel)]="taxBand" required>
+    </label><br>
+    <label>
+        Salary Scale:
+        <input type="number" name="salaryScale" [(ngModel)]="salaryScale" required>
+    </label><br>
+    <br>
+    <button type="submit">Submit</button>
+</form>

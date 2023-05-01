@@ -1,0 +1,30 @@
+<style>
+    table,
+    th,
+    td {
+        border: 2px solid black;
+        border-collapse: separate;
+    }
+</style>
+
+<h1>Students</h1>
+
+<!--Student Table-->
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>SID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{ student.id }}</td>
+            <td>{{ student.sid }}</td>
+            <td>{{ student.name }}</td>
+            <td><button (click)="deleteStudent(student.sid)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
